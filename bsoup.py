@@ -12,10 +12,9 @@ soup = bs.BeautifulSoup(artisthome,'lxml')
 songlists= soup.body.find(id = "listAlbum")
 
 for link in songlists.find_all('a'):
-    #print (link.get('href'))
     print (link.text)
 
 for div in soup.body.find_all('div', class_='album'):
-    print div.b
+    print (div.text.replace("album: ",""))
 
 
