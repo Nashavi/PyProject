@@ -26,7 +26,7 @@ for song in songs[1:]:
         c = c + 1
         print " "
     if (song.text.strip()) != '':
-        print (song.text) + ", " + (albums[c].text) + ", " + (song['href'].replace("..","http://http://www.azlyrics.com/"))
+        print (song.text.replace (",",".")) + ", " + (albums[c].text) + ", " + (song['href'].replace("..","http://www.azlyrics.com"))
     else:
         print " "
         c = c + 1
