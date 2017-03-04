@@ -42,6 +42,7 @@ for title in titles[1:]:
 
         for div in titleurlsoup.body.find_all('div', class_=''):
             lyrics = div.text.strip().replace(",", ";")
+            lyrics = re.sub(r'"', '', lyrics)
             lyrics = re.sub(r'[\t\r\n]', '|', lyrics)
 
         titlename = title.text.replace(",", ".")
@@ -56,9 +57,9 @@ for title in titles[1:]:
 
         link = title['href'].replace("..", "http://www.azlyrics.com")
 
-        time.sleep(random.choice([7, 8, 9, 10]))
+        time.sleep(random.choice([3, 4, 5, 6]))
 
-        f.write(titlename + ", " + albumtype + ", " + album + ", " + year + ", " + link + ", " + lyrics + "\n")
+        f.write(titlename.encode('ascii', 'ignore') + ", " + albumtype.encode('ascii', 'ignore') + ", " + album.encode('ascii', 'ignore') + ", " + year + ", " + link.encode('ascii', 'ignore') + ", " + lyrics.encode('ascii', 'ignore') + "\n")
 
         print titlename
 
