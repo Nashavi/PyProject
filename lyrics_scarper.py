@@ -28,7 +28,7 @@ f = open(filename, "w")
 f.write("title, release, album, year, link, lyrics\n")
 
 c = 0
-for title in titles[1:3]:
+for title in titles[1:]:
     if (title.text) == firstothertitle:
         c = c + 1
         print " "
@@ -56,7 +56,7 @@ for title in titles[1:3]:
 
         link = title['href'].replace("..", "http://www.azlyrics.com")
 
-        time.sleep(random.choice([7, 10, 12, 16, 18, 20]))
+        time.sleep(random.choice([7, 8, 9, 10]))
 
         f.write(titlename + ", " + albumtype + ", " + album + ", " + year + ", " + link + ", " + lyrics + "\n")
 
