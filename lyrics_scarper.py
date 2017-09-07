@@ -4,12 +4,12 @@ import time
 import random
 import re
 
-# artist = 'u/u2'
-# firstothertitle = "11 O'Clock Tick Tock"
+artist = 'u/u2'
+firstothertitle = "11 O'Clock Tick Tock"
 
-artist = 'c/coldplay'
-firstothertitle = "1.36"
-filename = "coldplay.csv"
+# artist = 'c/coldplay'
+# firstothertitle = "1.36"
+filename = "u2.csv"
 
 artisturl = 'http://www.azlyrics.com/' + artist + '.html'
 
