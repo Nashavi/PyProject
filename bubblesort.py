@@ -4,9 +4,7 @@ def bubblesort(x):
     i = 1
     while i < len(x):
         while x[i-1] > x[i] and i > 0:
-            y = x[i]
-            x[i] =x[i-1]
-            x[i - 1] = y
+            x[i],x[i-1] = x[i-1],x[i]
             i -= 1
         i += 1
     return x
