@@ -1,0 +1,52 @@
+def printer1(farg,sarg):
+    print(farg)
+    print(sarg)
+
+printer1("asd",234)
+printer1(["asd",234],["eds"])
+
+#############
+## args #####
+#############
+
+def printer2(*args):
+    for arg in args:
+        print(arg)
+
+printer2("asd",234,"2rwe","45gfwe","Wege")
+
+#############
+## kwargs ###
+#############
+
+def printer3(farg = 321,sarg = "your name"):
+    print(farg)
+    print(sarg)
+
+printer3()
+printer3("asd",234)
+printer3(["asd",234],["eds"])
+
+
+############
+
+
+def printer4(**kwargs):
+    for item in kwargs.items():
+        print(item)
+
+printer4(first = 365, second = 234)
+printer4(str = "asd", age = 234, address = ["eds"])
+
+############################
+### Both args and kwargs ###
+############################
+
+def printer5(*nargs, **nkwargs):
+    for arg in nargs:
+        print(arg)
+    for item in nkwargs.items():
+        print(item)
+
+printer5(123,"sdfsa",first = 100, second = 222234)
+printer5(str = "pasd", age = 234890, address = ["peds"])
